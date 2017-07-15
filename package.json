@@ -1,0 +1,60 @@
+{
+  "name": "egg-aliyun-api-gateway",
+  "version": "1.0.0",
+  "description": "aliyun-api-gateway for eggjs",
+  "eggPlugin": {
+    "name": "aliyunApiGateway"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "aliyunApiGateway"
+  ],
+  "dependencies": {
+    "aliyun-api-gateway": "^1.1.0"
+  },
+  "devDependencies": {
+    "autod": "^2.8.0",
+    "autod-egg": "^1.0.0",
+    "egg": "^1.4.0",
+    "egg-bin": "^3.4.0",
+    "egg-ci": "^1.6.0",
+    "egg-mock": "^3.7.0",
+    "eslint": "^3.19.0",
+    "eslint-config-egg": "^4.2.0",
+    "supertest": "^3.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "config",
+    "agent.js",
+    "lib",
+    "app.js"
+  ],
+  "ci": {
+    "version": "6, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-aliyun-api-gateway.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-aliyun-api-gateway#readme",
+  "author": "Thonatos.Yang",
+  "license": "MIT"
+}
