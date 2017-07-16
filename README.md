@@ -67,6 +67,7 @@ module.exports = app => {
       try {
         const result = await app.aliyunApiGateway.get(url);
         app.coreLogger.info(result);
+        ctx.body = result;
       } catch (error) {
         app.coreLogger.info(error);
         ctx.status = 400;
@@ -77,6 +78,7 @@ module.exports = app => {
 };
 ```
 
+[api-gateway-nodejs-sdk](https://github.com/aliyun/api-gateway-nodejs-sdk)
 
 ## Questions & Suggestions
 
