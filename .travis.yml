@@ -1,11 +1,16 @@
 sudo: false
 language: node_js
 node_js:
-  - '6'
-  - '8'
+- '8'
 install:
-  - npm i npminstall && npminstall
+- npm i npminstall && npminstall
 script:
-  - npm run ci
+- npm run ci
 after_script:
-  - npminstall codecov && codecov
+- npminstall codecov && codecov
+env:
+  global:
+  # ALIYUN_API_GATEWAY_APP_KEY
+  - secure: xzLcL+CARnDNl7x0dVbj0O4YyrEYM4JKk0agfJP5n5eb7a4wsotPZvzyQmZYEz7VclGaQdLEqPxJiJh5KcLh/xjuaOSfvarmPuC/cKsEGJs5By3GSGt51RRNdj69NWg13ftXRyYNHFn7+Al28Q0iJkopUn3gXklIeIOR5GMWa4M7O5irCpMnlBEBavcZIg3504l2vHw8CeHuZ4XR9f+Rv3FbjDr4hIsRngdx7DGBqtSaVYVH6Foa8ixaOb+YSHTxDAFOJFE0R02i75VDwrg9l3Hilrj5No8dX/68kzM7mQFlNcT7fZ/dL0ScKXVcPKA251y5tbgVhM5dcPgLkDFwcwkK1EybYOWUB15z6//FrRZYU8N/azPGONBhqgPS/3QHakh1qxPGoN4uG4UYtTJJSrbY+B8xPILoJSpbCtZw9p1Tw3JcJWNQRhrl1YvUHXvBhCSEnF2hwsVAD8I8B8zxsX43xx94IyPkfvYOvKT7AqP/eUlGv9c4RAwXnlP1vlV3j4ad05vc9+Hj0WK4TEfDqcw7EDxLXoMHpR8Kga0KF6AnMzkxitHUYT40iVdIEip9ymeMpTSuwS74f2UjPqkMQxWzXo7yM6hErODuVUR8sWgqzBAE2Zj40//HTU9Z62Gtwxe8bqsfHTnQVNJI5a/I+fwDXzPyAp+Pcn3U/7mKTXc=
+  # ALIYUN_API_GATEWAY_APP_SECRET
+  - secure: b+TWlT2YLhMaXkNvnLTz9SahKMIsJIbd4TEOq9vMYqKNcnbYX27qGaLXJRX2QnJIlfqTi1kVsnPuIBJxJqxsShjFxk5hCazncSy+GcFBvBNE4IHYrdPWUXGHZ+T0cCuBcTiQS/l784MGOp456tWwGaD+47VhVKcd4GnnsJfR4yeqqx1g+zN/eXrUhN4eZMC0nA8j1izomRhK5dz2a1iOKNcwJc0Jp33sMMpGtAGjOJqMgUX1aEAAR+CiO91ztdgczfVFUkkYJz1LZZu2ojAfI9/N9+hEggk52X2vPtySvJsadKPq1KfNR2ZR89uu7X3NrNLPl6zKztZ8D6zrgw0NqK5hsluYS2w1llGnqX6C632T8ogB6JuwClt6SWmijA9KeChdjPGSaH9nV35rlGZAEj2pluxADA6Ur504b4I/jMo6coVaAvWYBPJ8IlU7XBDYSQi4UTTDCAlpZ+jONb7kf+WPJvNVgu6ryM7wSt1K0hIOY7cf9EMZsT7QRTQF8/Qe50n9C95+n7mc0bkzpUP5UJwDC8hEM+LjkDTOm/DZCJWaxoKYe5oJ7IYV3zsF9uwGLm6gxQBqqU/PkaLUaVRU7jjFHjK8GyzxEyLQh2bUYSNz5tihFu12vMPnuWs6eluhb2T2CcM9B9Q4tC7vhElV3ugsUm4pWlx7534+sddP8Bc=

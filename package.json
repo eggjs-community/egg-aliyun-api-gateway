@@ -45,7 +45,7 @@
     "app.js"
   ],
   "ci": {
-    "version": "6, 8"
+    "version": "8"
   },
   "repository": {
     "type": "git",
@@ -54,7 +54,7 @@
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-aliyun-api-gateway#readme",
+  "homepage": "https://github.com/thonatos/egg-aliyun-api-gateway#readme",
   "author": "Thonatos.Yang",
   "license": "MIT"
 }

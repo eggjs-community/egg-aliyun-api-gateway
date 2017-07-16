@@ -15,9 +15,9 @@ describe('test/aliyun-api-gateway.test.js', () => {
   after(() => app.close());
   afterEach(mm.restore);
 
-  it('should error with code 400 GET /', () => {
+  it('should return json data with code 200 GET /', () => {
     return request(app.callback())
       .get('/')
-      .expect(400);
+      .expect(200);
   });
 });

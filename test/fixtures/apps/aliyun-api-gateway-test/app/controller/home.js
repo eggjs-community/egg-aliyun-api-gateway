@@ -4,12 +4,12 @@ module.exports = app => {
   return class HomeController extends app.Controller {
     async index() {
       const { ctx, app } = this;
-      const url = 'https://dm-81.data.aliyun.com/rest/160601/ip/getIpInfo.json?ip=210.75.225.254';
+      const url = 'https://openapi.insta360.com/community/v1/dailySelection/list?date=2017-07-16&days=1';
       try {
         const result = await app.aliyunApiGateway.get(url);
-        app.coreLogger.info(result);
+        ctx.status = 200;
+        ctx.body = result;
       } catch (error) {
-        app.coreLogger.info(error);
         ctx.status = 400;
         ctx.body = error.toString();
       }

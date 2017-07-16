@@ -9,12 +9,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-aliyun-api-gateway.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-aliyun-api-gateway
-[travis-image]: https://img.shields.io/travis/eggjs/egg-aliyun-api-gateway.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-aliyun-api-gateway
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-aliyun-api-gateway.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-aliyun-api-gateway?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-aliyun-api-gateway.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-aliyun-api-gateway
+[travis-image]: https://img.shields.io/travis/thonatos/egg-aliyun-api-gateway.svg?style=flat-square
+[travis-url]: https://travis-ci.org/thonatos/egg-aliyun-api-gateway
+[codecov-image]: https://img.shields.io/codecov/c/github/thonatos/egg-aliyun-api-gateway.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/thonatos/egg-aliyun-api-gateway?branch=master
+[david-image]: https://img.shields.io/david/thonatos/egg-aliyun-api-gateway.svg?style=flat-square
+[david-url]: https://david-dm.org/thonatos/egg-aliyun-api-gateway
 [snyk-image]: https://snyk.io/test/npm/egg-aliyun-api-gateway/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-aliyun-api-gateway
 [download-image]: https://img.shields.io/npm/dm/egg-aliyun-api-gateway.svg?style=flat-square
