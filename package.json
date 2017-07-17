@@ -1,6 +1,6 @@
 {
   "name": "egg-aliyun-api-gateway",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "aliyun-api-gateway for eggjs",
   "eggPlugin": {
     "name": "aliyunApiGateway"
