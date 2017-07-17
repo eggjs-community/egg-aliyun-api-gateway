@@ -24,6 +24,8 @@
 Description here.
 -->
 
+egg plugin for [aliyun-api-gateway](https://www.aliyun.com/product/apigateway?spm=5176.8142029.388261.285.715c4636wRT8p1)
+
 ## Install
 
 ```bash
@@ -32,6 +34,20 @@ $ npm i egg-aliyun-api-gateway --save
 
 ## Usage
 
+- GET 
+
+```
+app.aliyunApiGateway.get(url)
+```
+
+- POST 
+
+```
+app.aliyunApiGateway.post(url, data)
+```
+
+## Configuration
+
 ```js
 // {app_root}/config/plugin.js
 exports.aliyunApiGateway = {
@@ -39,8 +55,6 @@ exports.aliyunApiGateway = {
   package: 'egg-aliyun-api-gateway',
 };
 ```
-
-## Configuration
 
 ```js
 // {app_root}/config/config.default.js
@@ -56,29 +70,84 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 <!-- example here -->
 
+- Generator
+
 ```
 'use strict';
 
 module.exports = app => {
   return class HomeController extends app.Controller {
-    async index() {
+    * get() {
       const { ctx, app } = this;
-      const url = 'https://dm-81.data.aliyun.com/rest/160601/ip/getIpInfo.json?ip=210.75.225.254';
+      const url = 'https://openapi.insta360.com/community/v1/dailySelection/list?date=2017-07-16&days=1';
       try {
-        const result = await app.aliyunApiGateway.get(url);
-        app.coreLogger.info(result);
-        ctx.body = result;
+        ctx.body = yield app.aliyunApiGateway.get(url);
       } catch (error) {
-        app.coreLogger.info(error);
         ctx.status = 400;
         ctx.body = error.toString();
       }
     }
+
+    * post() {
+      const { ctx, app } = this;
+      const url = 'https://openapi.insta360.com/community/v1/post/update';
+      const data = {
+        id: {id},
+        info: {info},
+      };
+      try {
+        ctx.body = yield app.aliyunApiGateway.post(url, data);
+      } catch (error) {
+        ctx.status = 400;
+        ctx.body = error.toString();
+      }
+    }
+
   };
 };
 ```
 
-[api-gateway-nodejs-sdk](https://github.com/aliyun/api-gateway-nodejs-sdk)
+- Async
+
+```
+'use strict';
+
+module.exports = app => {
+  return class HomeController extends app.Controller {
+    async get() {
+      const { ctx, app } = this;
+      const url = 'https://openapi.insta360.com/community/v1/dailySelection/list?date=2017-07-16&days=1';
+      try {
+        ctx.body = await app.aliyunApiGateway.get(url);
+      } catch (error) {
+        ctx.status = 400;
+        ctx.body = error.toString();
+      }
+    }
+
+    async post() {
+      const { ctx, app } = this;
+      const url = 'https://openapi.insta360.com/community/v1/post/update';
+      const data = {
+        id: {id},
+        info: {info},
+      };
+      try {
+        ctx.body = await app.aliyunApiGateway.post(url, data);
+      } catch (error) {
+        ctx.status = 400;
+        ctx.body = error.toString();
+      }
+    }
+
+  };
+};
+```
+
+## Feature
+
+- [api-gateway-nodejs-sdk](https://github.com/aliyun/api-gateway-nodejs-sdk)
+- [https://help.aliyun.com/document_detail/29464.html](https://help.aliyun.com/document_detail/29464.html)
 
 ## Questions & Suggestions
 
