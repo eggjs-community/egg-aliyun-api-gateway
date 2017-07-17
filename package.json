@@ -9,6 +9,7 @@
     "egg",
     "eggPlugin",
     "egg-plugin",
+    "aliyun-api-gateway",
     "aliyunApiGateway"
   ],
   "dependencies": {
